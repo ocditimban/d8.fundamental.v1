@@ -1,0 +1,8 @@
+services:
+  hello.hellomessage:
+    class: Drupal\hello\HelloMessage
+  hello_message_event_subscriber:
+    class: Drupal\hello\EventSubscriber\HelloMessageEventSubscriber
+    arguments: ['@config.factory', '@plugin.manager.condition']
+    tags:
+      - {name: event_subscriber}
