@@ -29,7 +29,8 @@ hello.test3:
 hello.test4:
   path: 'set_key'
   defaults:
-    _content: '\Drupal\hello\Controller\KeyValueController::helloSetKeyValueStorage'
+#    _content: '\Drupal\hello\Controller\KeyValueController::helloSetKeyValueStorage'
+    _content: '\Drupal\hello\Controller\KeyValueExpirableController::helloSetKeyValueStorageExpirable'
     _title: 'Set Key Value'
   requirements:
     _permission: 'access content'
@@ -38,7 +39,8 @@ hello.test4:
 hello.test5:
   path: 'get_key'
   defaults:
-    _content: '\Drupal\hello\Controller\KeyValueController::helloGetKeyValueStorage'
+#    _content: '\Drupal\hello\Controller\KeyValueController::helloGetKeyValueStorage'
+    _content: '\Drupal\hello\Controller\KeyValueExpirableController::helloGetKeyValueStorageExpirable'
     _title: 'Get Key Value'
   requirements:
     _permission: 'access content'
