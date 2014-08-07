@@ -13,14 +13,21 @@ class HelloCacheController {
       $data = $c->data;
     }
     else {
-      $data = 'my hello cache 666';
+      $data = 'my hello cache 666777';
       $tags = array(
         'my_custom_tag' => TRUE,
         'node' => array(1, 3),
         'user' => array(7),
       );
-      // \Drupal::cache()->set($cid, $data, CacheBackendInterface::CACHE_PERMANENT);
-      \Drupal::cache()->set($cid, $data, CacheBackendInterface::CACHE_PERMANENT, array('hello_page' => TRUE));
+      // case 1:  Drupal::cache
+      $cache = \Drupal::cache();
+      // case 2: inject services
+      $cache = \Drupal::service('cache.default');
+      // do not use tags
+      // $cache->set($cid, $data, CacheBackendInterface::CACHE_PERMANENT);
+      // use tags
+      $cache->set($cid, $data, CacheBackendInterface::CACHE_PERMANENT, array('hello_page' => TRUE));
+
     }
     return $data;
   }
