@@ -1,0 +1,48 @@
+hello.page:
+  path: '/hello/{name}'
+  defaults:
+    _content: '\Drupal\hello\Controller\HelloController::helloPage'
+    _title: 'Hello Page'
+  requirements:
+    _permission: 'access content'
+
+# simple test
+hello.service:
+  path: '/hello'
+  defaults:
+    _content: '\Drupal\hello\Controller\HelloController::helloPageService'
+    _title: 'Hello Page'
+  requirements:
+    _permission: 'access content'
+
+# simple test
+hello.test3:
+  path: 'hello1'
+  defaults:
+    _content: '\Drupal\hello\Controller\HelloController::helloSimplePage'
+    _title: 'Hello 1'
+  requirements:
+    _permission: 'access content'
+
+# https://d08.hackpad.com/Day-01-Drupal-Fundamental-JMNUfd4itXl
+# Set Key Value Storage
+hello.test4:
+  path: 'set_key'
+  defaults:
+#    _content: '\Drupal\hello\Controller\KeyValueController::helloSetKeyValueStorage'
+#    _content: '\Drupal\hello\Controller\KeyValueExpirableController::helloSetKeyValueStorageExpirable'
+    _content: '\Drupal\hello\Controller\KeyValueCustomController::helloSetKeyValueCustom'
+    _title: 'Set Key Value'
+  requirements:
+    _permission: 'access content'
+
+# Set Key Value Storage
+hello.test5:
+  path: 'get_key'
+  defaults:
+#    _content: '\Drupal\hello\Controller\KeyValueController::helloGetKeyValueStorage'
+#    _content: '\Drupal\hello\Controller\KeyValueExpirableController::helloGetKeyValueStorageExpirable'
+    _content: '\Drupal\hello\Controller\KeyValueCustomController::helloGetKeyValueCustom'
+    _title: 'Get Key Value'
+  requirements:
+    _permission: 'access content'

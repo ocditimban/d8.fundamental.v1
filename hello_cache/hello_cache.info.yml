@@ -1,0 +1,6 @@
+name: Hello Cache
+type: module
+description: 'Learn to use the cache'
+package: Custom Module
+# version: VERSION
+core: 8.x

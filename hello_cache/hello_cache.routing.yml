@@ -1,0 +1,15 @@
+hello_cache.page:
+  path: '/cache/hello'
+  defaults:
+    _content: '\Drupal\hello_cache\Controller\HelloCacheController::hellocachePage'
+    _title: 'Hello Cache Page'
+  requirements:
+    _permission: 'access content'
+
+hello_cache.clear_page:
+  path: '/cache/hello/clear'
+  defaults:
+    _content: '\Drupal\hello_cache\Controller\HelloCacheController::hellocachePageClear'
+    _title: 'Hello Cache Page Clear'
+  requirements:
+    _permission: 'access content'
