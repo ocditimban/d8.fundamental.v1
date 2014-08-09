@@ -1,0 +1,6 @@
+name: Hello Field
+type: module
+description: 'Create a hello field'
+package: Custom Module
+# version: VERSION
+core: 8.x

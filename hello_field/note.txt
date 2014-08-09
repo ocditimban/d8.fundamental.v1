@@ -1,0 +1,2 @@
+use Drupal\Core\TypedData\DataDefinition;
+DataDefinition::create('string')->setLabel(t('Telephone number'));
