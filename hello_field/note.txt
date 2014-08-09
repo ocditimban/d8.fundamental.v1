@@ -1,2 +1,10 @@
 use Drupal\Core\TypedData\DataDefinition;
 DataDefinition::create('string')->setLabel(t('Telephone number'));
+
+
+FieldItemListInterface $items
+when we call interface by variable, You should be think interface is class
+Note:
+ - Need known:
+   + /core/lib/Drupal.php
+   + /core/core.services.yml
