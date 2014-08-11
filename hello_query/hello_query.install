@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function hello_query_schema() {
+
+  $schema['hello_query'] = array(
+    'description' => 'Generic Hello Query table',
+    'fields' => array(
+      'id' => array(
+        'description' => 'ID of hello query',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'des' => array(
+        'description' => 'Description of hello query',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+      'fname' => array(
+        // KEY is an SQL reserved word, so use 'name' as the key's field name.
+        'description' => 'First Name of hello query',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      ),
+      'lname' => array(
+        'description' => 'Last Name of hello query',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'default' => '',
+      )
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}

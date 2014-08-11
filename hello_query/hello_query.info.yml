@@ -1,0 +1,6 @@
+name: Hello Query
+type: module
+description: 'Hello Query(create, edit, drop).'
+package: Custom Module
+# version: VERSION
+core: 8.x

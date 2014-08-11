@@ -1,0 +1,39 @@
+hello_query.create_table:
+  path: '/query/create_table/{table_name}'
+  defaults:
+    _content: '\Drupal\hello_query\Controller\HelloQueryController::createTable'
+    _title: 'Hello Query | Create Table'
+  requirements:
+    _permission: 'access content'
+
+hello_query.drop_table:
+  path: '/query/drop_table/{table_name}'
+  defaults:
+    _content: '\Drupal\hello_query\Controller\HelloQueryController::dropTable'
+    _title: 'Hello Query | Drop Table'
+  requirements:
+    _permission: 'access content'
+
+hello_query.create_row:
+  path: '/query/create_row/{table_name}'
+  defaults:
+    _content: '\Drupal\hello_query\Controller\HelloQueryController::createRow'
+    _title: 'Hello Query | Create Row'
+  requirements:
+    _permission: 'access content'
+
+hello_query.edit_row:
+  path: '/query/edit_row/{table_name}'
+  defaults:
+    _content: '\Drupal\hello_query\Controller\HelloQueryController::editRow'
+    _title: 'Hello Query | Edit Row'
+  requirements:
+    _permission: 'access content'
+
+hello_query.delete_row:
+  path: '/query/delete_row/{table_name}'
+  defaults:
+    _content: '\Drupal\hello_query\Controller\HelloQueryController::deleteRow'
+    _title: 'Hello Query | Delete Row'
+  requirements:
+    _permission: 'access content'
