@@ -1,0 +1,6 @@
+name: Hello File
+type: module
+description: 'Hello File.'
+package: Custom Module
+# version: VERSION
+core: 8.x

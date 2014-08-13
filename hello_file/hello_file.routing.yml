@@ -1,0 +1,26 @@
+hello_file.getfile:
+  path: '/file/{path}'
+  defaults:
+    _content: '\Drupal\hello_file\Controller\HelloFileController::getBaseName'
+    _title: 'Hello File | Get Base Name'
+  requirements:
+    _permission: 'access content'
+  path: '/file/chmod'
+  defaults:
+    _content: '\Drupal\hello_file\Controller\HelloFileController::chmod'
+    _title: 'Hello File | CHMOD Name'
+  requirements:
+    _permission: 'access content'
+  path: '/file/dirname'
+  defaults:
+    _content: '\Drupal\hello_file\Controller\HelloFileController::dirname'
+    _title: 'Hello File | dirname Name'
+  requirements:
+    _permission: 'access content'
+  path: '/file/command'
+  defaults:
+    _content: '\Drupal\hello_file\Controller\HelloFileController::commandFile'
+    _title: 'Hello File | Command File'
+  requirements:
+    _permission: 'access content'
+
