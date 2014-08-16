@@ -1,0 +1,32 @@
+hello_request.client:
+  path: '/request/client'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloRequestController::render'
+    _title: 'Hello Request | Create Table'
+  requirements:
+    _permission: 'access content'
+
+hello_request.html:
+  path: '/response/html'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloResponseController::renderhtml'
+    _title: 'Hello Response HTML | Create Table'
+  requirements:
+    _permission: 'access content'
+
+hello_request.sendHtml:
+  path: '/response/send/html'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloResponseController::sendHtml'
+    _title: 'Hello Response HTML | Create Table'
+  requirements:
+    _permission: 'access content'
+
+hello_request.json:
+  path: '/response/json'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloResponseController::renderjson'
+    _title: 'Hello Response Json | Create Table'
+  requirements:
+    _permission: 'access content'
+

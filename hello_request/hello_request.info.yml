@@ -1,0 +1,6 @@
+name: Hello Request Info
+type: module
+description: 'Hello Request Info (Information From Client).'
+package: Custom Module
+# version: VERSION
+core: 8.x
