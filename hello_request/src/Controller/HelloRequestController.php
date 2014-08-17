@@ -84,5 +84,9 @@ class HelloRequestController {
     return 'hello request';
   }
 
+  public function renderSubRequest() {
+    return 'hello sub request';
+  }
+
 }
 

@@ -43,5 +43,31 @@ class HelloResponseController {
     return $response;
   }
 
+  public function renderCacheControl() {
+    $response = new Response();
+    // The following headers force validation of cache.
+    // $response->headers->set('Expires', 'Sat, 16 Aug 2014 10:00:34 GMT');
+    // $response->headers->set('Cache-Control', 'must-revalidate, max-age=3600');
+    // $response->headers->set('Content-Type', 'application/rss+xml; charset=utf-8');
+    // $response->setExpires('60');
+    // $response->setPublic();
+    // $response->setMaxAge(600);
+    // $response->setCache(array('public' => TRUE));
+    // $response->setContent(time());
+
+    // $response->setMaxAge(600);
+    // $response->headers->set('Expires', 'Sun, 19 Nov 1978 05:00:00 GMT');
+    // $response->headers->set('Cache-Control', 'max-age=2592000, public');
+    $response->headers->set('Connection', 'keep-alive');
+    $response->headers->set('Expires', 'Sat, 16 Aug 2014 20:47:12 GMT');
+    // $response->headers->set('Content-Type', 'application/rss+xml; charset=utf-8');
+    $response->setPublic();
+    $response->setContent(time());
+    $response->send();
+    // $response->setExpires(time() + 6000);
+    // var_dump($response->headers);
+    return $response;
+  }
+
 }
 

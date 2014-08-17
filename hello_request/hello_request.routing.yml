@@ -30,3 +30,20 @@ hello_request.json:
   requirements:
     _permission: 'access content'
 
+hello_request.cachecontrol:
+  path: '/response/cache'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloResponseController::renderCacheControl'
+    _title: 'Hello Response Cache | Create Table'
+  requirements:
+    _permission: 'access content'
+
+hello_request.subrequest:
+  path: '/request/sub'
+  defaults:
+    _content: '\Drupal\hello_request\Controller\HelloRequestController::renderSubRequest'
+    _title: 'Hello Sub Request'
+  requirements:
+    _permission: 'access content'
+
+
