@@ -2,6 +2,7 @@
 
 namespace Drupal\hello_request\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 class HelloRequestController {
   public function render() {
@@ -84,8 +85,23 @@ class HelloRequestController {
     return 'hello request';
   }
 
+  /*
+   * get two request
+   * /response/html and /response/json
+   */
   public function renderSubRequest() {
-    return 'hello sub request';
+    // subrequest1
+    $subrequest1 = Request::create('/response/html', 'GET');
+    $kernel = \Drupal::service('httpkernel');
+    $response1 = $kernel->handle($subrequest1, HttpKernelInterface::SUB_REQUEST);
+
+    // subrequest2
+    $subrequest2 = Request::create('/response/json', 'GET');
+    $kernel = \Drupal::service('httpkernel');
+    $response2 = $kernel->handle($subrequest2, HttpKernelInterface::SUB_REQUEST);
+    var_dump($response1->getStatusCode());
+    return $response1->getContent() . $response2->getContent();
+    // return 'hello sub request';
   }
 
 }

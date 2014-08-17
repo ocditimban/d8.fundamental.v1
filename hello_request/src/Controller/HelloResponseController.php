@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 class HelloResponseController {
   public function renderhtml() {
     $response = new Response(
-      'Content',
+      'Content From Response',
       Response::HTTP_OK,
       array('content-type' => 'text/html')
     );
