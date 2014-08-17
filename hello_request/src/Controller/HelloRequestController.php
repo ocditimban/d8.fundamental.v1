@@ -88,6 +88,7 @@ class HelloRequestController {
   /*
    * get two request
    * /response/html and /response/json
+   * see hello_request.routing.yml
    */
   public function renderSubRequest() {
     // subrequest1
