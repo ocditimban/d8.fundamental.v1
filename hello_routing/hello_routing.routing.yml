@@ -63,3 +63,25 @@ hello_routing.attachform:
   requirements:
     _permission: 'access content'
 
+# custom node view
+# learn enttiy_view
+# view entity with mode rss
+# view node in entity node
+hello_routing.node_view:
+  path: 'routing/node/{node}'
+  defaults:
+    _entity_view: 'node.rss'
+    _title_callback: '\Drupal\node\Controller\NodeViewController::title'
+  requirements:
+    _entity_access: 'node.view'
+
+# learn entity_list
+# custom node list
+# list nodes in entity node
+hello_routing.node_list:
+  path: 'routing/list/node'
+  defaults:
+    _entity_list: 'node'
+    _title: 'Node'
+  requirements:
+    _permission: 'administer'
