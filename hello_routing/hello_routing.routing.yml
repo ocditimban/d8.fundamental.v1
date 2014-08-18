@@ -4,7 +4,7 @@ hello_routing.content:
   defaults:
     _content: 'Drupal\hello_routing\Controller\HelloRoutingController::renderContent'
   requirements:
-    _permission: 'access content'
+    _role: 'administrator'
 
 # Callback with arguments
 # http://d8v1.com/routing/content/phuong => Hello phuong bui
@@ -50,6 +50,7 @@ hello_routing.form:
   path: 'routing/form'
   defaults:
     _title: 'Example Form'
+    _title_context: 'With components 1111'
     _form: '\Drupal\hello_routing\Form\ExampleForm'
   requirements:
     _permission: 'access content'
@@ -67,6 +68,7 @@ hello_routing.attachform:
 # learn enttiy_view
 # view entity with mode rss
 # view node in entity node
+# http://d8v1.com/routing/node/5 (5 is node id)
 hello_routing.node_view:
   path: 'routing/node/{node}'
   defaults:
@@ -85,3 +87,21 @@ hello_routing.node_list:
     _title: 'Node'
   requirements:
     _permission: 'administer'
+
+hello_routing.node_add_type:
+  path: 'routing/add/node/type'
+  defaults:
+    _entity_form: 'node_type.add'
+    _title: 'Add node custom'
+  requirements:
+    _permission: 'administer'
+
+# Injectable Controller
+# at service into controller
+hello_routing.inject_controller:
+  path: 'routing/inject'
+  defaults:
+    _title: 'Injectable Controller'
+    _content: 'Drupal\hello_routing\Controller\InjectController::render'
+  requirements:
+    _permission: 'access content'

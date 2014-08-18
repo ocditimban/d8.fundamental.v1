@@ -1,13 +1,16 @@
 <?php
 namespace Drupal\hello_routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class HelloRoutingController {
   public function renderContent() {
     return '<div class="html">routing content</div>';
   }
 
-  public function renderArgumentContent($name, $namedefault) {
+  public function renderArgumentContent(Request $request, $name, $namedefault) {
+    // or \Drupal::request()
+    var_dump($request);
     return "Hello {$name} {$namedefault}";
   }
 
