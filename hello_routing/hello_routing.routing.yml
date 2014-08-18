@@ -1,7 +1,18 @@
+#Simple Callback
 hello_routing.content:
   path: 'routing/content'
   defaults:
     _content: 'Drupal\hello_routing\Controller\HelloRoutingController::renderContent'
+  requirements:
+    _permission: 'access content'
+
+# Callback with arguments
+# http://d8v1.com/routing/content/phuong => Hello phuong bui
+hello_routing.argument:
+  path: 'routing/content/{name}'
+  defaults:
+    _content: 'Drupal\hello_routing\Controller\HelloRoutingController::renderArgumentContent'
+    namedefault: 'bui'
   requirements:
     _permission: 'access content'
 

@@ -7,6 +7,10 @@ class HelloRoutingController {
     return '<div class="html">routing content</div>';
   }
 
+  public function renderArgumentContent($name, $namedefault) {
+    return "Hello {$name} {$namedefault}";
+  }
+
 
   public function renderNoResponse() {
     return '<div class="html">routing content</div>';
