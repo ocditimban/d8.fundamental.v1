@@ -1,0 +1,5 @@
+name: Hello Routing
+type: module
+description: 'Hello Routing (Learn about routing)'
+package: Custom Module
+core: 8.x

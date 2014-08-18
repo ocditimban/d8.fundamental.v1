@@ -1,0 +1,8 @@
+<?php
+
+/*
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hello_routing_form_example_form111_alter(&$form, &$form_state) {
+  $form['phone_number']['#description'] = t('Start with + and your country code.');
+}

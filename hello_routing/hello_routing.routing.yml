@@ -1,0 +1,41 @@
+hello_routing.content:
+  path: 'routing/content'
+  defaults:
+    _content: 'Drupal\hello_routing\Controller\HelloRoutingController::renderContent'
+  requirements:
+    _permission: 'access content'
+
+# return must be response
+hello_routing.controller:
+  path: 'routing/controller'
+  defaults:
+    _controller: 'Drupal\hello_routing\Controller\HelloRoutingController::renderController'
+  requirements:
+    _permission: 'access content'
+
+# Not Acceptable message
+hello_routing.controller.no_response:
+  path: 'routing/controller/no_response'
+  defaults:
+    _controller: 'Drupal\hello_routing\Controller\HelloRoutingController::renderNoResponse'
+  requirements:
+    _permission: 'access content'
+
+# use with form
+hello_routing.form:
+  path: 'routing/form'
+  defaults:
+    _title: 'Example Form'
+    _form: '\Drupal\hello_routing\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
+
+# render form in hello word
+hello_routing.attachform:
+  path: 'routing/attach/form'
+  defaults:
+    _title: 'Attach Form'
+    _content: 'Drupal\hello_routing\Controller\HelloRoutingController::attachForm'
+  requirements:
+    _permission: 'access content'
+
