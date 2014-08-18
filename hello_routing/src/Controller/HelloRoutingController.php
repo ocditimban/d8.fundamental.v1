@@ -29,4 +29,8 @@ class HelloRoutingController {
     $form = \Drupal::formBuilder()->getForm('Drupal\hello_routing\Form\ExampleForm');
     return '<div>attach form</div>' . render($form);
   }
+
+  public function renderOptionsContent() {
+    return 'add access options';
+  }
 }

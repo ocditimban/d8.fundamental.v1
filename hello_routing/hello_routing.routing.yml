@@ -16,6 +16,19 @@ hello_routing.argument:
   requirements:
     _permission: 'access content'
 
+# add option
+# only display theme seven with admin
+hello_routing.options:
+  path: 'routing/options/content'
+  defaults:
+    _content: 'Drupal\hello_routing\Controller\HelloRoutingController::renderOptionsContent'
+    _title: 'Options Title'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access content'
+
+
 # return must be response
 hello_routing.controller:
   path: 'routing/controller'
