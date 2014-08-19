@@ -13,7 +13,7 @@ class RouteSubscriber extends RouteSubscriberBase {
     }
     // inject container
     // alter to change path and add name argument
-    // change path and method
+    // change path and content
     if ($route = $collection->get('hello_routing_advance.inject_container')) {
       $route->setPath('/hello_routing_advance/inject/{name}');
       $route->setDefault('_content', '\Drupal\hello_routing_advance\Controller\InjectContainerController::renderArg');
