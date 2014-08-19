@@ -10,3 +10,10 @@ hello_routing_advance.inject_container:
   requirements:
     _permission: 'access content'
 
+# learn about custom access
+hello_routing_advance.custom_access:
+  path: 'hello_routing_advance/access/example'
+  defaults:
+    _content: '\Drupal\hello_routing_advance\Controller\CustomAccessController::content'
+  requirements:
+    _custom_access:  '\Drupal\hello_routing_advance\Controller\CustomAccessController::checkAccess'
