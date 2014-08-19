@@ -1,0 +1,9 @@
+services:
+  hello_routing_advance.route_subscriber:
+    class: Drupal\hello_routing_advance\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  hello_routing_advance.hello:
+    class: Drupal\hello_routing_advance\Controller\Hello
+  hello_routing_advance.word:
+    class: Drupal\hello_routing_advance\Controller\Word
