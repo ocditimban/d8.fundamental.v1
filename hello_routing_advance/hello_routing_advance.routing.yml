@@ -1,0 +1,11 @@
+route_callbacks:
+  - '\Drupal\hello_routing_advance\Routing\HelloRoutingAdvance::routes'
+
+hello_routing_advance.default_controller_hello:
+  path: 'hello_routing_advance/hello/{name}'
+  defaults:
+    _content: '\Drupal\hello_routing_advance\Controller\DefaultController::hello'
+    _title: 'hello_routing_advance Title'
+  requirements:
+    _permission: 'access content'
+
