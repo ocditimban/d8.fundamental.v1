@@ -1,8 +1,12 @@
 services:
   hello_service.simple:
     class: Drupal\hello_service\SimpleService
+  # use service with argument is child service
   hello_service.argument_service:
     class: Drupal\hello_service\ArgumentService
     arguments:  ['@hello_service.simple', '@current_user']
     tags:
       - { name: hello_service.renderbycache, priority: 10 }
+  # alter a service
+  hello_service.alter_service:
+    class: Drupal\hello_service\SimpleService

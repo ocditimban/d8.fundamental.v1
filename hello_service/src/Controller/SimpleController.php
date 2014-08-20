@@ -14,4 +14,10 @@ class SimpleController {
     $parent_service = \Drupal::service('hello_service.argument_service');
     return 'hello simple controller ' . $parent_service->renderSimpleService();
   }
+
+  // call service is altered
+  public function alterServiceRender() {
+    $alter_service = \Drupal::service('hello_service.alter_service');
+    return $alter_service->alterRender();
+  }
 }

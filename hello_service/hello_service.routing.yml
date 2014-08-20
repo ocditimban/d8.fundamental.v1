@@ -5,9 +5,18 @@ hello_service.simple_service:
   requirements:
     _permission: 'access content'
 
+# argument service
 hello_service.argument_service:
   path: 'hello_service/argument_service'
   defaults:
     _content: '\Drupal\hello_service\Controller\SimpleController::argumentServiceRender'
+  requirements:
+    _permission: 'access content'
+
+# alter service
+hello_service.alter_service:
+  path: 'hello_service/alter_service'
+  defaults:
+    _content: '\Drupal\hello_service\Controller\SimpleController::alterServiceRender'
   requirements:
     _permission: 'access content'
