@@ -1,0 +1,8 @@
+services:
+  hello_service.simple:
+    class: Drupal\hello_service\SimpleService
+  hello_service.argument_service:
+    class: Drupal\hello_service\ArgumentService
+    arguments:  ['@hello_service.simple', '@current_user']
+    tags:
+      - { name: hello_service.renderbycache, priority: 10 }

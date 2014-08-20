@@ -1,0 +1,13 @@
+hello_service.simple_service:
+  path: 'hello_service/simple_service'
+  defaults:
+    _content: '\Drupal\hello_service\Controller\SimpleController::render'
+  requirements:
+    _permission: 'access content'
+
+hello_service.argument_service:
+  path: 'hello_service/argument_service'
+  defaults:
+    _content: '\Drupal\hello_service\Controller\SimpleController::argumentServiceRender'
+  requirements:
+    _permission: 'access content'

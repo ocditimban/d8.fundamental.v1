@@ -1,0 +1,5 @@
+name: hello_service
+type: module
+description: Learn About Service
+core: 8.x
+package: Custom Module
