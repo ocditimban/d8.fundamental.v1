@@ -8,3 +8,9 @@ services:
     class: Drupal\hello_routing_advance\Controller\Hello
   hello_routing_advance.word:
     class: Drupal\hello_routing_advance\Controller\Word
+
+  hello.route_enhancer:
+    class: Drupal\hello_routing_advance\Routing\DemoRouteEnhancer
+    arguments: ['@controller_resolver', '@entity.manager', '@form_builder']
+    tags:
+        - { name: route_enhancer, priority: 20 }
