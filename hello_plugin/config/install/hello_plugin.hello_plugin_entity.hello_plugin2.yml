@@ -1,0 +1,19 @@
+# see hello_plugin.schema.yml (hello_plugin\config\schema\hello_plugin.schema.yml)
+# module: is system, hello_plugin, etc
+id: hello_plugin2
+module: hello_plugin
+label: 'Hello Plugin 2'
+# list plugins
+hello:
+  hello-text-3:
+    id: hello-text-3
+    plugin: text
+    label: 'hello-text-3 title create when installed'
+    body: 'hello-text-3 body create when installed'
+    weight: 1
+  hello-text-4:
+    id: hello-text-4
+    plugin: number
+    label: 'hello-text-4 title create when installed'
+    body: 'hello-text-4 body create when installed'
+    weight: 2

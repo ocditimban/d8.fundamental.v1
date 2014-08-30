@@ -1,0 +1,6 @@
+hello_plugin.simple:
+  path: 'hello_plugin/simple'
+  defaults:
+    _content: '\Drupal\hello_plugin\Controller\Simple::renderPlugin'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,4 @@
+services:
+  plugin.manager.hello_plugin.hello:
+    class: Drupal\hello_plugin\HelloPluginManager
+    parent: default_plugin_manager

@@ -1,0 +1,40 @@
+# Schema for entity
+# set default schema for entity
+
+# schema for entity
+# module_name.entity_id.*
+# entity_id in (@ConfigEntityType hello_plugin\src\Entity\HelloPlugin.php)
+hello_plugin.hello_plugin_entity.*:
+  type: config_entity
+  label: 'hello_plugin_entity schema'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    module:
+      type: string
+      label: 'Providing module'
+    hello:
+      type: sequence
+      label: 'Hello'
+      sequence:
+        - type: hello.plugin.[plugin]
+          label: 'Hello Plugin'
+
+# schema for plugin
+hello.plugin:
+  type: mapping
+  label: 'Hello Plugin'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    plugin:
+      type: string
+      label: 'Plugin'
+    label:
+      type: label
+      label: 'Label'

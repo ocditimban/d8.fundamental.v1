@@ -1,0 +1,5 @@
+name: hello_plugin
+type: module
+description: Learn about plugin in drupal 8
+core: 8.x
+package: Custom Module
