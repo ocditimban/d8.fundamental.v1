@@ -1,0 +1,5 @@
+name: hello_cmi
+type: module
+description: Learn about hello_cmi
+core: 8.x
+package: Custom Module

@@ -1,0 +1,16 @@
+hello_cmi.getSimpleConfig:
+  path: 'hello/cmi/get'
+  defaults:
+    _content: '\Drupal\hello_cmi\Controller\HelloCmiController::getSimpleConfig'
+    _title: 'Get hello_cmi Title'
+  requirements:
+    _permission: 'access content'
+
+hello_cmi.setSimpleConfig:
+  path: 'hello/cmi/set'
+  defaults:
+    _content: '\Drupal\hello_cmi\Controller\HelloCmiController::setSimpleConfig'
+    _title: 'Set hello_cmi Title'
+  requirements:
+    _permission: 'access content'
+

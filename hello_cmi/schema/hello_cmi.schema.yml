@@ -1,0 +1,10 @@
+hello_cmi.simple_cmi:
+  type: mapping
+  label: 'Simple CMI'
+  mapping:
+    foo:
+      type: text
+      label: 'label foo'
+    bar:
+      type: string
+      label: 'label bar'
