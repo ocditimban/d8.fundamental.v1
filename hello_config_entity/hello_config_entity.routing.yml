@@ -1,0 +1,28 @@
+hello_config_entity.list:
+  path: '/hello_config_entity'
+  defaults:
+    _entity_list: 'hello_config_entity'
+    _title: 'hello_config_entity list'
+  requirements:
+    _permission: 'access content'
+hello_config_entity.add:
+  path: '/hello_config_entity/add'
+  defaults:
+    _entity_form: 'hello_config_entity.add'
+    _title: 'Add hello_config_entity'
+  requirements:
+    _permission: 'access content'
+hello_config_entity.edit_config:
+  path: '/hello_config_entity/{hello_config_entity}'
+  defaults:
+    _entity_form: 'hello_config_entity.edit'
+    _title: 'Edit hello_config_entity'
+  requirements:
+    _permission: 'access content'
+hello_config_entity.delete_config:
+  path: '/hello_config_entity/{hello_config_entity}/delete'
+  defaults:
+    _entity_form: 'hello_config_entity.delete'
+    _title: 'Delete hello_config_entity'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,10 @@
+hello_config_entity.hello_config_entity.*:
+  type: config_entity
+  label: 'Example config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+        type: label
+        label: 'Label'

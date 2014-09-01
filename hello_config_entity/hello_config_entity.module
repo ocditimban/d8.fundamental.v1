@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_config_entity.module
+*/
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+
+function hello_config_entity_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the hello_config_entity module.
+    case 'help.page.hello_config_entity':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create a configuration entity type') . '</p>';
+      return $output;
+    break;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function hello_config_entity_theme()
+{
+  $theme = [];
+
+  return $theme;
+}

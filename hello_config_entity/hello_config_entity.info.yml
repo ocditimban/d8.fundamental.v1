@@ -1,0 +1,5 @@
+name: hello_config_entity
+type: module
+description: Create a configuration entity type
+core: 8.x
+package: Custom Module
