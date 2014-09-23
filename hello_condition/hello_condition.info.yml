@@ -1,0 +1,5 @@
+name: hello_condition
+type: module
+description: Hello Condition (Condition only use for block module)
+core: 8.x
+package: Custom Module

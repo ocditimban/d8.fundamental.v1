@@ -1,0 +1,6 @@
+services:
+  hello_condition_event_subscriber:
+    class: Drupal\hello_condition\EventSubscriber\HelloConditionEventSubscriber
+    arguments: ['@config.factory', '@plugin.manager.condition']
+    tags:
+      - {name: event_subscriber}
